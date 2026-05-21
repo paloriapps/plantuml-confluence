@@ -1,0 +1,38 @@
+modules:
+  macro:
+    - key: plantuml-macro
+      resource: main
+      render: native
+      resolver:
+        function: resolver
+      title: PlantUML
+      description: Render PlantUML diagrams from text. BYOS (bring your own server).
+      config: {}
+  confluence:globalSettings:
+    - key: plantuml-admin
+      resource: admin
+      render: native
+      resolver:
+        function: resolver
+      title: PlantUML
+      useAsConfig: true
+  function:
+    - key: resolver
+      handler: index.handler
+resources:
+  - key: main
+    path: src/frontend/index.jsx
+  - key: admin
+    path: src/frontend/admin.jsx
+permissions:
+  scopes:
+    - storage:app
+  external:
+    images:
+      - address: "*"
+app:
+  runtime:
+    name: nodejs24.x
+    memoryMB: 256
+    architecture: arm64
+  id: ari:cloud:ecosystem::app/e4b4d8d7-0ac3-4b7d-9488-c9efb3950318
