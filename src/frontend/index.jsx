@@ -26,6 +26,7 @@ const App = () => {
     invoke('getServerUrl')
       .then((url) => {
         if (cancelled) return;
+        // Resolver guarantees a non-empty URL string (default or stored).
         setServerUrl(url ?? DEFAULT_SERVER_URL);
       })
       .catch(() => {
