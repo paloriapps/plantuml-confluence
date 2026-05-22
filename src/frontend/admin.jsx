@@ -127,7 +127,7 @@ const Admin = () => {
       <Box>
         <Text size="small" color="color.text.subtlest">
           <Link
-            href="https://plantuml.irfanthomson.com/changelog.html"
+            href="https://polari.co/changelog"
             openNewTab
           >
             What&apos;s new
