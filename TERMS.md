@@ -46,4 +46,4 @@ You may stop using the App at any time by uninstalling it from your Confluence s
 
 ## 8. Contact
 
-`irfanthomson@gmail.com`
+`paloriapps@gmail.com`

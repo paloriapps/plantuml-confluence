@@ -1,6 +1,6 @@
 # PlantUML for Confluence
 
-A Confluence Cloud Forge app that renders PlantUML diagrams inline on pages. Paste PlantUML source into a macro, get an SVG diagram. Free tier is BYOS (bring your own server) — point the app at any PlantUML render server you control, or use the public `plantuml.com` instance by default.
+A Confluence Cloud Forge app that renders PlantUML diagrams inline on pages. Paste PlantUML source into a macro, get an SVG diagram. Works out of the box — the macro defaults to the public PlantUML server at `https://www.plantuml.com/plantuml`, so no infrastructure is required to get diagrams rendering. If your diagrams may contain sensitive information, the app also supports BYOS (bring your own server): a site admin can point it at any PlantUML render server you control.
 
 ## Quickstart (end users)
 
@@ -17,7 +17,7 @@ A Confluence Cloud Forge app that renders PlantUML diagrams inline on pages. Pas
 
 4. Publish the page. The diagram renders as an inline SVG.
 
-By default, diagrams are rendered by the public `https://www.plantuml.com/plantuml` server. The diagram source is sent (URL-encoded) to that server every time the page is viewed. If your diagrams contain anything sensitive, configure your own server (see below).
+By default, diagrams are rendered by the public `https://www.plantuml.com/plantuml` server, which is operated by the PlantUML project (not by Palori). The diagram source is URL-encoded and sent to that server every time the page is viewed — plantuml.com handles it under its own privacy practices, and Palori takes no responsibility for what they do with it. If your diagrams contain anything sensitive, configure your own server (see below).
 
 ## BYOS — point the app at your own PlantUML server
 
@@ -112,8 +112,8 @@ You need the Forge CLI (`npm i -g @forge/cli`) and a Forge account linked to a C
 
 ## Policies
 
-- Privacy policy: <https://plantuml.irfanthomson.com/privacy.html>
-- Terms of use: <https://plantuml.irfanthomson.com/terms.html>
+- Privacy policy: <https://palori.co/privacy>
+- Terms of use: <https://palori.co/terms>
 
 Markdown sources for both are in this repo (`PRIVACY.md`, `TERMS.md`).
 
@@ -123,4 +123,4 @@ Source-available under the [PolyForm Shield License 1.0.0](./LICENSE). You can r
 
 ## Contact
 
-`irfanthomson@gmail.com`
+`paloriapps@gmail.com`

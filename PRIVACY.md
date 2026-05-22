@@ -52,4 +52,4 @@ If this policy changes materially, the new version will be published in the App'
 
 ## Contact
 
-Questions about this policy: `irfanthomson@gmail.com`
+Questions about this policy: `paloriapps@gmail.com`
