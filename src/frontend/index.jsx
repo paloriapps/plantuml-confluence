@@ -15,7 +15,7 @@ const DEFAULT_SERVER_URL = 'https://www.plantuml.com/plantuml';
 const App = () => {
   const config = useConfig();
   const context = useProductContext();
-  const [serverUrl, setServerUrl] = useState(DEFAULT_SERVER_URL);
+  const [serverUrl, setServerUrl] = useState(null);
 
   // v1: license check is a no-op stub. In v2, gate paid features here.
   // eslint-disable-next-line no-unused-vars
@@ -47,6 +47,8 @@ const App = () => {
       </Text>
     );
   }
+
+  if (!serverUrl) return null;
 
   const encoded = plantumlEncoder.encode(source);
   const src = `${serverUrl}/svg/${encoded}`;
